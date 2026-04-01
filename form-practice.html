@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSaathi | Form Practice</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section class="practice-container">
+        <div class="practice-card">
+
+            <!-- STEP 1: Fill Form -->
+            <div id="form-step1" class="form-step">
+                <h1>Form Filling Practice</h1>
+                <p>Step 1: Enter your details carefully</p>
+
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" placeholder="Enter full name">
+
+                <label for="mobile">Mobile Number</label>
+                <input type="text" id="mobile" placeholder="Enter 10-digit mobile number">
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter email address">
+
+                <label for="city">City</label>
+                <input type="text" id="city" placeholder="Enter city">
+
+                <label for="purpose">Purpose</label>
+                <select id="purpose">
+                    <option value="">Select purpose</option>
+                    <option value="Bank Registration">Bank Registration</option>
+                    <option value="Government Service">Government Service</option>
+                    <option value="Scholarship Application">Scholarship Application</option>
+                    <option value="Job Application">Job Application</option>
+                </select>
+
+                <button onclick="goToReviewStep()">Review Details</button>
+                <p id="form-message"></p>
+            </div>
+
+            <!-- STEP 2: Review Screen -->
+            <div id="form-step2" class="hidden-section">
+                <h1>Review Your Details</h1>
+                <p>Step 2: Check everything before submitting</p>
+
+                <div class="success-box">
+                    <p><strong>Name:</strong> <span id="review-name"></span></p>
+                    <p><strong>Mobile:</strong> <span id="review-mobile"></span></p>
+                    <p><strong>Email:</strong> <span id="review-email"></span></p>
+                    <p><strong>City:</strong> <span id="review-city"></span></p>
+                    <p><strong>Purpose:</strong> <span id="review-purpose"></span></p>
+                </div>
+
+                <div class="tip-box">
+                    <strong>Before You Submit:</strong>
+                    <ul class="safety-list">
+                        <li>✔ Check spelling of your name and city</li>
+                        <li>✔ Verify your mobile number and email carefully</li>
+                        <li>✔ Never share OTP or passwords during form submission</li>
+                    </ul>
+                </div>
+
+                <button onclick="submitFinalForm()">Submit Form</button>
+                <button onclick="goBackToEdit()" class="secondary-btn">Edit Details</button>
+            </div>
+
+            <!-- STEP 3: Success Screen -->
+            <div id="form-step3" class="hidden-section">
+                <h1>✅ Form Submitted</h1>
+                <p class="success-text">Your practice form has been submitted successfully.</p>
+
+                <div class="success-box">
+                    <p><strong>Name:</strong> <span id="final-name"></span></p>
+                    <p><strong>Mobile:</strong> <span id="final-mobile"></span></p>
+                    <p><strong>Email:</strong> <span id="final-email"></span></p>
+                    <p><strong>City:</strong> <span id="final-city"></span></p>
+                    <p><strong>Purpose:</strong> <span id="final-purpose"></span></p>
+                </div>
+
+                <div class="tip-box">
+                    💡 <strong>Learning Tip:</strong> Always review all details before submitting any online form. Even small mistakes can lead to delays or rejection.
+                </div>
+
+                <button onclick="restartFormPractice()">Try Again</button>
+            </div>
+
+            <a href="modules.html" class="back-btn practice-back">← Back to Modules</a>
+        </div>
+    </section>
+
+    <script src="js/form.js"></script>
+</body>
+</html>

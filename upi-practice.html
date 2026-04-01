@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSaathi | UPI Practice</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section class="practice-container">
+        <div class="practice-card">
+
+            <div id="step1" class="upi-step">
+                <h1>UPI Payment Practice</h1>
+                <p>Step 1: Enter payment details</p>
+
+                <label for="receiver">Receiver Name</label>
+                <input type="text" id="receiver" placeholder="Enter receiver name">
+
+                <label for="upiid">UPI ID</label>
+                <input type="text" id="upiid" placeholder="example@upi">
+
+                <label for="amount">Amount (₹)</label>
+                <input type="number" id="amount" placeholder="Enter amount">
+
+                <button onclick="goToPinStep()">Proceed</button>
+                <p id="payment-message"></p>
+            </div>
+
+            <div id="step2" class="upi-step hidden-section">
+                <h1>Enter UPI PIN</h1>
+                <p>Step 2: Confirm safely before payment</p>
+
+                <div class="safety-box">
+                    <h3>Before You Pay:</h3>
+                    <ul class="safety-list">
+                        <li>✔ Verify the receiver name carefully</li>
+                        <li>✔ Check if the UPI ID is trusted</li>
+                        <li>✔ Never share your UPI PIN with anyone</li>
+                    </ul>
+                </div>
+
+                <label for="pin">4-Digit UPI PIN (Dummy)</label>
+                <input type="password" id="pin" placeholder="Enter 4-digit PIN" maxlength="4">
+
+                <button onclick="confirmPayment()">Confirm Payment</button>
+                <p id="pin-message"></p>
+            </div>
+
+            <div id="step3" class="upi-step hidden-section">
+                <h1>✅ Payment Successful</h1>
+                <p class="success-text">Mock payment completed successfully.</p>
+
+                <div class="success-box">
+                    <p><strong>Receiver:</strong> <span id="success-receiver"></span></p>
+                    <p><strong>Amount:</strong> ₹<span id="success-amount"></span></p>
+                </div>
+
+                <div class="tip-box">
+                    💡 <strong>Learning Tip:</strong> Always verify the receiver and UPI ID before entering your PIN.
+                </div>
+
+                <button onclick="restartPractice()">Try Again</button>
+            </div>
+
+            <a href="modules.html" class="back-btn practice-back">← Back to Modules</a>
+        </div>
+    </section>
+
+    <script src="js/upi.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSaathi | Scam Awareness Practice</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section class="practice-container">
+        <div class="practice-card">
+
+            <!-- Intro Screen -->
+            <div id="scam-start-screen">
+                <h1>Scam Awareness Practice</h1>
+                <p>Test your ability to spot common digital scams.</p>
+
+                <div class="tip-box">
+                    💡 <strong>Goal:</strong> Read each situation carefully and decide whether it is <strong>Safe</strong> or <strong>Unsafe</strong>.
+                </div>
+
+                <button onclick="startScamQuiz()">Start Practice</button>
+            </div>
+
+            <!-- Quiz Screen -->
+            <div id="scam-quiz-screen" class="hidden-section">
+                <h1>Scenario <span id="question-number">1</span> of 3</h1>
+
+                <div class="success-box">
+                    <p id="scenario-text"></p>
+                </div>
+
+                <div class="button-group">
+                    <button onclick="checkAnswer('Safe')">Safe</button>
+                    <button onclick="checkAnswer('Unsafe')">Unsafe</button>
+                </div>
+
+                <p id="scam-feedback"></p>
+                <div id="scam-explanation" class="tip-box hidden-section"></div>
+
+                <button id="next-btn" class="secondary-btn hidden-section" onclick="nextQuestion()">Next Scenario</button>
+            </div>
+
+            <!-- Result Screen -->
+            <div id="scam-result-screen" class="hidden-section">
+                <h1>Practice Complete 🎉</h1>
+                <p class="success-text">You completed the Scam Awareness Practice.</p>
+
+                <div class="success-box">
+                    <p><strong>Your Score:</strong> <span id="final-score"></span> / 3</p>
+                </div>
+
+                <div class="tip-box">
+                    <strong>Remember these safety rules:</strong>
+                    <ul class="safety-list">
+                        <li>✔ Never share OTP, PIN, or passwords</li>
+                        <li>✔ Do not trust urgent or threatening messages blindly</li>
+                        <li>✔ Avoid unknown links and suspicious payment requests</li>
+                        <li>✔ Always verify with the official app, bank, or website</li>
+                    </ul>
+                </div>
+
+                <button onclick="restartScamQuiz()">Try Again</button>
+            </div>
+
+            <a href="modules.html" class="back-btn practice-back">← Back to Modules</a>
+        </div>
+    </section>
+
+    <script src="js/scam.js"></script>
+</body>
+</html>
