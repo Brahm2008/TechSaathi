@@ -55,3 +55,11 @@ Check it out here: [TechSaathi Live](https://Brahm2008.github.io/TechSaathi/)
 ## License
 
 Free to use for educational and portfolio purposes.
+
+---
+
+## Future Scope
+
+- Add interactive progress tracking without storing personal data
+- Include multilingual accessibility for first-time digital users
+- Expand modules for online banking, email safety and government portals
